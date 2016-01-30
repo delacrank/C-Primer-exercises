@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <string>
+    
+using namespace std;
+    
+int main()
+{
+    vector<int> v1;
+    int i = 0;
+    int j = 0;
+        
+    while(cin >> i)
+        v1.push_back(i);
+        
+    for(int sum; j < v1.size(); ++j) {
+        sum = v1[j] + v1[j + 1];
+        cout << sum << endl;
+        sum = 0;
+    }        
+
+    return 0;
+}

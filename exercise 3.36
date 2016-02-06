@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+    
+using namespace std;
+    
+int main()
+{
+    int ia[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int ib[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+       
+    for(int j = 0; j < 10; ++j)
+    {
+        if(ia[j] == ib[j])
+             cout << "For element : " << j << " the two arrays are equal" << endl;
+         else 
+            cout << "they are not equal" << endl;
+    }
+    return 0;
+}

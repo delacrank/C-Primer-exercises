@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+    
+using namespace std;
+    
+int main()
+{
+    int array_size = 10;
+    int ia[array_size] = {};
+    
+    for(int x = 0; x < array_size; ++x) { 
+        ia[x] = x;
+    }
+    
+    vector<int> iv (ia, ia + array_size);
+    
+    for(auto v : iv)
+        cout << v << endl;
+}

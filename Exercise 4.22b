@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+#include <string>
+    
+using namespace std;
+    
+int main() {
+    int grade = 0;
+    string finalgrade;
+    cout << "Enter a grade between 1 - 100" << endl;
+    while(cin >> grade) {
+        if((grade >= 0) && (grade <= 100)) {
+            if(grade > 90) {
+                finalgrade = "high pass";
+            } else if (grade >= 60  && grade <= 75) {
+                finalgrade = "low pass";
+            } else if (grade < 60) {
+                finalgrade = "fail";
+            } else {
+                finalgrade = "pass";
+            }
+            cout << finalgrade << endl;
+            return 0;
+        }
+        else
+            cout << "enter a grade between 1 - 100" << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+#include <vector>
+#include <string>
+    
+using namespace std;
+    
+int main() {
+    int val = 0, sum = 0;
+    while(val <= 10) {
+        sum += val, ++val;
+    }
+}

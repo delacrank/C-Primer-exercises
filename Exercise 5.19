@@ -22,5 +22,5 @@ int main() {
         cout << "To continue press y" << endl;
         cin >> c;
     }
-    while(c == 'y');
+    while(c == 'y' || EOF);
 }

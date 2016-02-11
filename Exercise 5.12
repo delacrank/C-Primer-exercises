@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+    
+int main() {
+    
+    char c;
+    char c2;
+    int cnt = 0;
+    int fnt = 0;
+    
+    while(cin >> noskipws >> c >> c2 && c != EOF){
+        if(c == 'a' || c == 'e' || c == 'i' || c == 'o' ||  c =='u')
+            ++cnt;
+        else if(c == 'A' || c == 'E' || c == 'I' || c == 'O' ||  c =='U')
+            ++cnt;
+        else if(c == ' ' || c == '\t' || c == '\n') 
+            ++cnt;    
+        else if((c == 'f' && c2 == 'l') || (c == 'f' && c2 == 'i') || (c == 'f' && c2 == 'f'))
+                ++fnt;  
+    }
+    
+    cout << "Number of vowels, spaces " << cnt << endl;
+    cout << "Number of ff, fl, fi " << fnt << endl;
+}

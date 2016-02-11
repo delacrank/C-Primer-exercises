@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+    
+int main() {
+    
+    int cnt = 0;
+    string s;
+    string w;
+    
+    while(cin >> s >> w) {
+        if(s == w)
+            ++cnt;
+    }
+    cout << "Number dupilicated words " << cnt << endl;
+    return 0;
+}
+    

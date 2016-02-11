@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+    
+int main() {
+    
+    vector<int> vi1 = {2,2,3,4,5,6,7,8,9,10};
+    vector<int> vi2 = {1,2,3,4,5,6,7,8,9,10};
+    
+    for(auto x = vi1.begin(), y = vi2.begin(); x != vi1.end(), y != vi2.end(); ++x, ++y)
+    {
+        if(*x > *y)
+            cout << *x << " x is greater than y: " << *y << endl;
+        else if(*y > *x)
+            cout << *y << " y is greater than x: " << *x << endl;
+        else if(*x == *y)
+            cout << *x << " x is equal to y: " << *y << endl;
+        else
+            cout << *x << " x and y cannot be compared." << endl;
+    }
+    return 0;
+}
+    

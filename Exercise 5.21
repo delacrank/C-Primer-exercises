@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+    
+int main() {
+   
+    string s, r;
+    int i;
+    
+    while(cin >> s) 
+    {
+        
+        if(r == s)
+        {
+            if(isupper(r[0]))
+            {
+                cout << "duplicate uppercase " << r <<  endl;
+                s = '\0';
+                break;
+            }
+        }
+        else
+            r = s;
+    } 
+}

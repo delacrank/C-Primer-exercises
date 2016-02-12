@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+    
+int main() {
+    float first = 0, second = 0;
+    cin >> first >> second;
+    cout << first/second << endl;
+}
+    

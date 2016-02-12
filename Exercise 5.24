@@ -1,0 +1,13 @@
+#include <iostream>
+#include <stdexcept>
+
+using namespace std;
+    
+int main() {
+    float first = 0, second = 0;
+    cin >> first >> second;
+    if (second == 0) {
+       throw runtime_error("the second number must not be zero.");
+    }
+    cout << first/second << endl;
+}

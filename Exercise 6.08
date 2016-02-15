@@ -1,0 +1,18 @@
+#ifndef TEST_H
+#define TEST_H
+
+int fact()
+{
+    int x = 0;
+    
+    std::cout << "Typer a number" << std::endl;
+    
+    std::cin >> x;
+    
+    for(int val = x - 1; val > 1; --val)
+        x *= val;
+    
+    std::cout << "Your factorial is: " << x << std::endl;
+}
+
+#endif

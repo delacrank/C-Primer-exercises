@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+void swap(int*, int*);
+
+int main()
+{
+    int x = 9, y = 5;
+    
+    swap(&x, &y);
+    
+    cout << x << " " << y << endl;
+}
+
+void swap(int *p, int *q)
+{
+    int temp = 0;
+    
+    temp = *p;
+    *p = *q;
+    *q = temp;
+}

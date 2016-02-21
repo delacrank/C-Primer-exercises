@@ -14,7 +14,6 @@ int main()
     cout << s << endl;
 }
 
-// Take three variables: const string ref, char, and size_type ref
 void find_upper(const string &s)
 {
     for(unsigned i = 0; i != s.size(); ++i) {

@@ -26,8 +26,8 @@ void find_upper(const string &s)
 
 void change_to_lower(string &s)
 {
-    for(char &q : s) {
-        q = tolower(q);
-     }      
+    for(unsigned i = 0; i != s.size(); ++i) {
+        s[i] = tolower(s[i]);
+    }  
 }
 

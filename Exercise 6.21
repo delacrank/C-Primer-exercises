@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int larger(int, int*);
+
+int main()
+{
+    int x = 7;
+    int y = 5;
+    
+    cout << larger(x, &y) << endl;
+}
+
+int larger(int x, int *y)
+{
+    if(x > *y)
+    {
+        return x;
+    } 
+    else 
+    {
+        return *y;
+    }
+}

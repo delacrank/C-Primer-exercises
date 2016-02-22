@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void error_msg(initializer_list<string>);
+
+int main()
+{
+    initializer_list<string> li = {"one","two","three","four"};
+    error_msg(li);
+}
+
+void error_msg(initializer_list<string> li)
+{
+    for(initializer_list<string>::iterator beg = li.begin(); beg != li.end(); ++beg)
+        cout << *beg << endl;
+}

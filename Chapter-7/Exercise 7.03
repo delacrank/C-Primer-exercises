@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+
+struct Sales_data { // define structure for our program
+    Sales_data& combine(const Sales_data&);
+    std::string isbn() const { return bookNo; }
+    
+    std::string bookNo; // book ID or isbn
+    unsigned units_sold = 0; // amount of books
+    double revenue = 0.0; // total price of books
+};
+
+Sales_data& Sales_data::combine(const Sales_data &rhs)
+{
+    units_sold += rhs.units_sold; // add existing units to new ones
+    revenue += rhs.revenue; // add existing price total to new total
+    return *this; // return these values
+}
+
+int main()
+{
+    Sales_data total; // store our structure in a variable called total
+    
+    if(std::cin >> total.bookNo >> total.units_sold >> total.revenue) // prompt for book id, book amount and price
+    {
+        Sales_data trans; // store our structure in a variable called trans
+        while(std::cin >> trans.bookNo >> trans.units_sold >> trans.revenue) // prompt for book id, book amount and price
+        {
+            if(total.bookNo == trans.bookNo) // if total and trans have the same book id
+            {
+                total.combine(trans); // add these structures together
+            }    
+            else 
+            {
+                std::cout << total.bookNo << " " << total.units_sold << " " << total.revenue << std::endl; // otherwise print results
+                total = trans; // set the structure variables equal to each other
+            }
+        }
+        std::cout << total.bookNo << " " << total.units_sold << " " << total.revenue << std::endl; // display the results
+    } else {
+        std::cerr << "No data?!" << std::endl;
+        return -1;
+    }
+    std::cout << total.isbn() << std::endl; // display our book number
+    return 0;
+}

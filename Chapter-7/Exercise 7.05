@@ -1,0 +1,21 @@
+#include <string>
+#include <iostream>
+
+struct Person {
+    std::string name;
+    std::string address;
+    std::string printName() const { return name; }
+    std::string printAddress() const { return address; }
+};
+
+int main()
+{
+    Person john;
+    
+    john.name = "junior";
+    john.address = "324 55 str";
+    
+    std::cout << "Name: " << john.printName() << "\nAddress: " << john.printAddress() << std::endl;
+    
+    return 0;
+}

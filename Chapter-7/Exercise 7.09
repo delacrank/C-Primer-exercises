@@ -1,0 +1,32 @@
+#include <string>
+#include <iostream>
+
+struct Person {
+    std::string name;
+    std::string address;
+    std::string printName() const { return name; }
+    std::string printAddress() const { return address; }
+};
+
+std::istream &read(std::istream &in, Person &info)
+{
+    in >> info.name >> info.address;
+    return in;
+}
+
+std::ostream &print(std::ostream &out, Person &info)
+{
+    out << info.name << " " << info.address;
+    return out;
+}
+
+int main()
+{
+    Person john;
+    
+    read(std::cin, john);
+    print(std::cout, john);
+    std::cout << std::endl;
+
+    return 0;
+}

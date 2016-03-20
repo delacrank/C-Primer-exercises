@@ -4,7 +4,11 @@
 struct Person {
     friend std::istream &read(std::istream&, Person&);
     friend std::ostream &print(std::ostream&, Person&);
-
+    
+    Person() = default;
+    Person(std::string n) : name(n) {}
+    Person(std::string n, std::string a) : name(n), address(a) {}
+    
     std::string printName() const { return name; }
     std::string printAddress() const { return address; }
 private:    

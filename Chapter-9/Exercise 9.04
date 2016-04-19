@@ -1,0 +1,27 @@
+    #include <iostream>
+    #include <vector>
+
+    bool check (std::vector<int>::iterator first, std::vector<int>::iterator last, int value )
+    {
+        for(std::vector<int>::iterator x = first; x != last; ++x)
+        {
+            if(*x == value)
+            {
+                return true;    
+            }
+        }
+        return false;
+    }
+
+    int main()
+    {
+        std::vector<int> vi {0,1,2,3,4,5,6,7,8,9};
+        
+        if(check(vi.begin(), vi.end(), 10))
+        {
+            std::cout << "Found" << std::endl;
+        } else {
+            std::cout << "Not Found" << std::endl;
+        }
+        
+    }

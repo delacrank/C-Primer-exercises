@@ -1,0 +1,21 @@
+    #include <iostream>
+    #include <vector>
+
+    std::vector<int>::iterator check (std::vector<int>::iterator first, std::vector<int>::iterator last, int value )
+    {
+        for(std::vector<int>::iterator x = first; x != last; ++x)
+        {
+            if(*x == value)
+            {
+                return x;    
+            }
+        }
+        return last;
+    }
+
+
+    int main()
+    {
+        std::vector<int> vi {3,2,1,4,5,3,6};
+        std::cout << *(check(vi.begin(), vi.end(), 2)) << std::endl;
+    }

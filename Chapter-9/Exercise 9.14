@@ -1,0 +1,14 @@
+#include <iostream>
+#include <string>
+#include <list>
+#include <vector>
+
+int main()
+{
+    std::list<const char*> words {"one","two","three"};
+    std::vector<std::string> words2;
+    words2.assign(words.begin(), words.end());
+        
+    for(std::string i : words2)
+        std::cout << i << std::endl;
+}

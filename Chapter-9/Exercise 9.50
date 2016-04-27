@@ -1,0 +1,15 @@
+    #include <iostream>
+    #include <string>
+    #include <vector>
+
+    int main()
+    {
+        std::vector<std::string> s {"11","21","32","12"};
+        int sum = 0;
+        
+        for(std::string i : s){
+            sum += std::stoi(i);
+            std::cout << sum << std::endl;
+       }
+        
+    }

@@ -1,0 +1,11 @@
+#include <iostream>
+#include <list>
+#include <string>
+#include <algorithm>
+
+int main(){
+  std::list<std::string> ls {"1","2","2","3","4","2"};
+       
+  std::cout << count(ls.begin(), ls.end(), "2") << std::endl;   
+}
+   
